@@ -13,4 +13,3 @@ C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Models\bin\Debug\EntityFramework.xm
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Models\obj\Debug\ElevenNote.Models.csproj.CopyComplete
