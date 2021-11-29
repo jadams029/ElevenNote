@@ -15,7 +15,7 @@ namespace ElevenNote.Services
         {
             _userID = userID;
         }
-        public bool CreateNote(NoteCreate model)
+        public bool CreateNote(NoteCreate model) //creates an instance of note
         {
             var entity = new Note()
             {
@@ -30,7 +30,7 @@ namespace ElevenNote.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<NoteListItem> GetNotes()
+        public IEnumerable<NoteListItem> GetNotes() // see all notes that belong to a specfic user 
         {
             using (var ctx = new ApplicationDbContext())
             {
