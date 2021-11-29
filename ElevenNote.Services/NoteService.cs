@@ -46,5 +46,23 @@ namespace ElevenNote.Services
                 return query.ToArray();
             }
         }
+        public NoteDetail GetNoteById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Notes
+                        .Single(e => e.NoteID == id && e.OwnerID == _userID);
+                return new NoteDetail
+                {
+                    NoteID = entity.NoteID,
+                    Title = entity.Title,
+                    Content = entity.Content,
+                    CreatedUTC = entity.CreatedUTC,
+                    ModifiedUTC = entity.ModifiedUTC,
+                };
+            }
+        }
     }
 }
