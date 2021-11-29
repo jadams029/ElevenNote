@@ -68,13 +68,18 @@ namespace ElevenNote.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Notes.Single(e => e.NoteID == model.NoteID && e.OwnerID == _userID);
+                var entity = ctx.Notes.SingleOrDefault(e => e.NoteID == model.NoteID && e.OwnerID == _userID); //the .Single will kick an error on null, .SingleOrDefault will default to null removing the error (will return internal server error in the NoteController but wont c
 
-                entity.Title = model.Title;
-                entity.Content = model.Content;
-                entity.ModifiedUTC = DateTimeOffset.UtcNow;
+                if (entity != null)
+                {
+                    entity.Title = model.Title;
+                    entity.Content = model.Content;
+                    entity.ModifiedUTC = DateTimeOffset.UtcNow;
 
-                return ctx.SaveChanges() == 1;
+                    return ctx.SaveChanges() == 1;
+                }
+                return false;
+         
             }
         }
     }
