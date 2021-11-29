@@ -30,6 +30,5 @@ C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Data\bin\Debug\Newtonsoft.Json.xml
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Net.Http.Formatting.xml
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Web.Http.xml
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Web.Http.Owin.xml
-C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.dll
 C:\ElevenFiftyProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.pdb
