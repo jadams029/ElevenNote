@@ -46,7 +46,7 @@ namespace ElevenNote.Services
                 return query.ToArray();
             }
         }
-        public NoteDetail GetNoteById(int id)
+        public NoteDetail GetNoteByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -62,6 +62,19 @@ namespace ElevenNote.Services
                     CreatedUTC = entity.CreatedUTC,
                     ModifiedUTC = entity.ModifiedUTC,
                 };
+            }
+        }
+        public bool UpdateNote(NoteEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Notes.Single(e => e.NoteID == model.NoteID && e.OwnerID == _userID);
+
+                entity.Title = model.Title;
+                entity.Content = model.Content;
+                entity.ModifiedUTC = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }
